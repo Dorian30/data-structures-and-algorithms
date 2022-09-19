@@ -8,17 +8,21 @@ export interface INode<T> {
  */
 
 export class Stack<T> {
-  public length: number;
+  private _length: number;
   private head?: INode<T>;
 
   constructor() {
-    this.length = 0;
+    this._length = 0;
     this.head = undefined;
+  }
+
+  get length() {
+    return this._length;
   }
 
   push(value: T): void {
     const node: INode<T> = { value };
-    this.length++;
+    this._length++;
 
     if (this.head) {
       node.prev = this.head;
@@ -31,7 +35,7 @@ export class Stack<T> {
   pop(): T | undefined {
     if (!this.head) return;
 
-    this.length--;
+    this._length--;
 
     const head = this.head;
     this.head = this.head.prev;

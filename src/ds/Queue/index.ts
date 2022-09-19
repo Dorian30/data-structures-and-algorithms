@@ -8,18 +8,22 @@ export interface INode<T> {
  */
 
 export class Queue<T> {
-  public length: number;
+  private _length: number;
   private head?: INode<T>;
   private tail?: INode<T>;
 
   constructor() {
-    this.length = 0;
+    this._length = 0;
     this.head = this.tail = undefined;
+  }
+
+  get length() {
+    return this._length;
   }
 
   enqueue(value: T): void {
     const node: INode<T> = { value };
-    this.length++;
+    this._length++;
 
     if (this.tail) {
       this.tail.next = node;
@@ -32,12 +36,12 @@ export class Queue<T> {
   deque(): T | undefined {
     if (!this.head) return;
 
-    this.length--;
+    this._length--;
 
     const value = this.head?.value;
     this.head = this.head.next;
 
-    if (this.length === 0) {
+    if (this._length === 0) {
       this.tail = undefined;
     }
 
