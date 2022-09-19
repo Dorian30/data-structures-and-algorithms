@@ -1,6 +1,6 @@
 # data-structures-and-algorithms
 
-A repositories with some data structures, common DSAs and code problems solutions. (WIP)
+A repository with some data structures, common DSAs and code problems solutions. (WIP)
 
 ## Data Structures
 
