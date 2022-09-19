@@ -1,4 +1,4 @@
-import { SinglyLinkedList } from '../../SinglyLinkedList';
+import { SinglyLinkedList } from '../../SLL';
 
 let list: SinglyLinkedList<number>;
 
