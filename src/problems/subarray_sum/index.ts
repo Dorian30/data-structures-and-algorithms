@@ -15,7 +15,7 @@
 export function maxSubarraySum(array: Array<number>, n: number) {
   // If the array is empty
   if (array.length === 0 || n === 0) return 0;
-  // Declare sum variable
+  // Create a sum variable
   let maxSum = 0;
 
   // Traverse the array and add the first n elements (Starts at 0 all the way until n)
@@ -35,7 +35,7 @@ export function maxSubarraySum(array: Array<number>, n: number) {
     const prevItem = array[i - 1];
     const nextItem = array[i + n - 1];
 
-    // Declare temp sum variable.
+    // Move the slidding window.
     tempSum = tempSum - prevItem + nextItem;
 
     // If tempSum is higher that our current max sum, then set max sum to temp sum
