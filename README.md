@@ -2,13 +2,13 @@
 
 A repository with some data structures, common DSAs and code problems solutions with TypeScript. (WIP)
 
-## Data Structures
+## [Data Structures](/src/ds/)
 
 - [Singly Linked List](/src/ds/SLL/)
 - [Queue](/src/ds/Queue/)
 - [Stack](/src/ds/Stack/)
 
-## Algorithms
+## [Algorithms](/src/dsa/)
 
 - Search
   - Linear
@@ -18,3 +18,5 @@ A repository with some data structures, common DSAs and code problems solutions 
   - Quick
   - Merge
   - Insertion
+
+## [Problems](/src/problems/)
